@@ -1,0 +1,2 @@
+This is a text file created by Peter Murphy
+I am trying to copy it from rlogin to my local directory
