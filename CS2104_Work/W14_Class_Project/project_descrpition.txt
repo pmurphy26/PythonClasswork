@@ -1,0 +1,49 @@
+This file can be run with the terminal command: python dictionary_attack.py
+
+The program will open the file dict.txt in this zip and read all the entries from it, this can be changed by editting 
+the line at the bottom of the code valid_passwords = read_valid_passwords("dict.txt").
+
+The project will let you know that you are using sha256 hashing and you can change this by entering sha512 and vice versa. 
+Either enter a password made of up between one and three entries from the dictionary, or q to quit.
+If a password is entered then the program will run a function to determine how many words are in the password and if it is valid.
+If it is valid then the program will perform a dictionary attack on the password. The program will 
+then print the password, the number of attempts it took to crack, and how long it took to crack. 
+Once all the passwords are inputted and the user decides to quit a graph will be created in a seperate window
+that displays each point and the password for that point, time it took the crack the password, number of 
+attempts it took to crack the password, and the hash type used on the password. These are then plotted in ascending
+order of password difficulty along the x axis and the time it took to crack the password along the y axis.
+
+The code is commented to show the purpose and functionality of each method. 
+
+
+Functionality example: 
+The current hashing type is sha256, if you wish to change to sha512  enter sha512 for the password and viceversa.
+Password: *enter_password*
+The password is *entered_password*, the number of attempts this took was ___
+the time it took to crack the password was ____ seconds.
+Password: sha512
+you are now using sha512 hashing
+Password: *enter_password*
+The password is *entered_password*, the number of attempts this took was ___
+the time it took to crack the password was ____ seconds.
+Password: q
+*program displays graph in new window*
+*program finishes running*
+
+
+
+
+results from one set of tests (part 6 data points because I can't include a screenshot in a text file):
+password difficulty. (inputted password, time to crack, attempts to crack, hash type used)
+
+Dictionary size = 170
+0. (password, 0.0001, 1, sha256)
+1. (dog, 0.0055, 61, sha256)
+2. (turtle, 0.016, 170, sha256)
+3. (password123, 0.012, 118, sha256)
+4. (123batman, 1.9472, 19907, sha256)
+5. (112233321, 2.0652, 21029, sha256)
+6. (turtle112233, 2.6422, 28854, sha256)
+7. (password123456123, 1.8735, 19158, sha256)
+8. (dogmets123, 124.0715, 1741938, sha256)
+9. (winnermalboro987654, 285.5635, 4039501, sha256)
